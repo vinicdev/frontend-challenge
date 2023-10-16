@@ -1,5 +1,5 @@
 import { InputHTMLAttributes } from "react";
-import SearchIcon from "../seach-icon";
+import SearchIcon from "../icons/seach-icon";
 import { InputContainer, InputPrimary } from "./style";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
