@@ -4,11 +4,7 @@ import { FilterContainter, PriorityFilter } from "./style";
 import { useFilter } from "@/hooks/useFilter";
 import { PriorityTypes } from "@/types/priority-types";
 
-interface FilterByPriorityProps {
-
-}
-
-export function FilterByPrioriry(props: FilterByPriorityProps) {
+export function FilterByPrioriry() {
     const [isOpen, setIsOpen] = useState(false);
     const { setPriority } = useFilter()
 

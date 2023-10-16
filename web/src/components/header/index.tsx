@@ -10,12 +10,14 @@ const sairaStencil = Saira_Stencil_One({
 import { Container, Logo } from "./style";
 import { PrimaryInputSearchIcon } from '../primary-input';
 import { CartControl } from '../cart-control';
+import { useFilter } from '@/hooks/useFilter';
 
 interface HeaderProps {
 
 }
 
 export default function Header(props: HeaderProps) {
+    const {setSearch, search} = useFilter()
     return (
         <>
             <Container>
@@ -24,7 +26,11 @@ export default function Header(props: HeaderProps) {
                 </Logo>
 
                 <div>
-                    <PrimaryInputSearchIcon placeholder="Procurando por algo específico?" />
+                    <PrimaryInputSearchIcon 
+                        value={search}
+                        handleChange={setSearch}
+                        placeholder="Procurando por algo específico?" 
+                    />
                     <CartControl />
                 </div>
 
