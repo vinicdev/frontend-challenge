@@ -7,6 +7,7 @@ const saira = Saira({
 })
 
 import Header from '@/components/header'
+import * as filterContexts from '@/contexts/filter-context'
 
 export const metadata = {
   title: 'Create Next App',
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={saira.className}>
-        <Header />
-        {children}
+        <filterContexts.FilterContextProvider>
+          <Header />
+          {children}
+        </filterContexts.FilterContextProvider>
       </body>
     </html>
   )
