@@ -1,4 +1,8 @@
+"use client"
+
+import { FilterByPrioriry } from "../filter-by-priority";
 import FilterByType from "../filter-by-type";
+import { FilterContainer } from "./style";
 
 interface FilterBar {
 
@@ -6,10 +10,9 @@ interface FilterBar {
 
 export default function FilterBar(props: FilterBar) {
     return (
-        <>
-            <div>
-                <FilterByType />
-            </div>
-        </>
+        <FilterContainer>
+            <FilterByType />
+            <FilterByPrioriry />
+        </FilterContainer>
     )
 }

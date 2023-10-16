@@ -17,6 +17,7 @@ export const FilterItem = styled.li<FilterItemProps>`
     text-align: center;
     text-transform: uppercase;
     color: var(--text-dark);
+    cursor: pointer;
 
     border-bottom: ${props => props.selected ? '4px solid var(--orange-low)' : 'none'};
 `;
